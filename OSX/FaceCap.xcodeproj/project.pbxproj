@@ -30,6 +30,9 @@
 		753B437F22809CBC00FA5F1B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		753B43872281DB7500FA5F1B /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		753B43892281DDF000FA5F1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7571B5FD22B17BCD008A1033 /* libLandmarkDetector.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLandmarkDetector.a; path = ../../Documents/OpenFace/build/lib/local/LandmarkDetector/libLandmarkDetector.a; sourceTree = "<group>"; };
+		7571B5FF22B17BDF008A1033 /* libGazeAnalyser.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGazeAnalyser.a; path = ../../Documents/OpenFace/build/lib/local/GazeAnalyser/libGazeAnalyser.a; sourceTree = "<group>"; };
+		7571B60122B17BF2008A1033 /* libUtilities.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUtilities.a; path = ../../Documents/OpenFace/build/lib/local/Utilities/libUtilities.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +76,9 @@
 		753B43862281DB7500FA5F1B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7571B60122B17BF2008A1033 /* libUtilities.a */,
+				7571B5FF22B17BDF008A1033 /* libGazeAnalyser.a */,
+				7571B5FD22B17BCD008A1033 /* libLandmarkDetector.a */,
 				753B43872281DB7500FA5F1B /* Accelerate.framework */,
 			);
 			name = Frameworks;
@@ -192,6 +198,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/opencv/4.1.0_2/include/opencv4,
+					/usr/local/Cellar/dlib/19.17/include,
+					/Users/anshpatel/Documents/OpenFace/lib/local/LandmarkDetector/include,
+					/Users/anshpatel/Documents/OpenFace/lib/local/GazeAnalyser/include,
+					/Users/anshpatel/Documents/OpenFace/lib/local/Utilities/include,
+					/usr/local/Cellar/boost/1.67.0_1/include,
+				);
 				INFOPLIST_FILE = Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -247,6 +261,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/opencv/4.1.0_2/include/opencv4,
+					/usr/local/Cellar/dlib/19.17/include,
+					/Users/anshpatel/Documents/OpenFace/lib/local/LandmarkDetector/include,
+					/Users/anshpatel/Documents/OpenFace/lib/local/GazeAnalyser/include,
+					/Users/anshpatel/Documents/OpenFace/lib/local/Utilities/include,
+					/usr/local/Cellar/boost/1.67.0_1/include,
+				);
 				INFOPLIST_FILE = Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -264,11 +286,22 @@
 				HEADER_SEARCH_PATHS = (
 					/usr/local/Cellar/opencv/4.1.0_2/include/opencv4,
 					/usr/local/Cellar/dlib/19.17/include,
+					/Users/anshpatel/Documents/OpenFace/lib/local/LandmarkDetector/include,
+					/Users/anshpatel/Documents/OpenFace/lib/local/GazeAnalyser/include,
+					/Users/anshpatel/Documents/OpenFace/lib/local/Utilities/include,
+					/usr/local/Cellar/boost/1.67.0_1/include,
+					/usr/local/opt/openblas/include,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/FaceCap/Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					/usr/local/Cellar/opencv/4.1.0_2/lib,
 					/usr/local/Cellar/dlib/19.17/lib,
+					/usr/local/Cellar/boost/1.67.0_1/lib,
+					/Users/anshpatel/Documents/OpenFace/build/lib/local/FaceAnalyser,
+					/Users/anshpatel/Documents/OpenFace/build/lib/local/LandmarkDetector,
+					/Users/anshpatel/Documents/OpenFace/build/lib/local/GazeAnalyser,
+					/Users/anshpatel/Documents/OpenFace/build/lib/local/Utilities,
+					/usr/local/opt/openblas/lib/,
 				);
 				OTHER_LDFLAGS = (
 					"-lopencv_stitching",
@@ -314,6 +347,13 @@
 					"-lopencv_imgproc",
 					"-lopencv_core",
 					"-ldlib",
+					"-lFaceAnalyser",
+					"-lLandmarkDetector",
+					"-lGazeAnalyser",
+					"-lUtilities",
+					"-lboost_filesystem",
+					"-lboost_system",
+					"-lopenblas",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.facecap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -328,11 +368,22 @@
 				HEADER_SEARCH_PATHS = (
 					/usr/local/Cellar/opencv/4.1.0_2/include/opencv4,
 					/usr/local/Cellar/dlib/19.17/include,
+					/Users/anshpatel/Documents/OpenFace/lib/local/LandmarkDetector/include,
+					/Users/anshpatel/Documents/OpenFace/lib/local/GazeAnalyser/include,
+					/Users/anshpatel/Documents/OpenFace/lib/local/Utilities/include,
+					/usr/local/Cellar/boost/1.67.0_1/include,
+					/usr/local/opt/openblas/include,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/FaceCap/Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					/usr/local/Cellar/opencv/4.1.0_2/lib,
 					/usr/local/Cellar/dlib/19.17/lib,
+					/usr/local/Cellar/boost/1.67.0_1/lib,
+					/Users/anshpatel/Documents/OpenFace/build/lib/local/FaceAnalyser,
+					/Users/anshpatel/Documents/OpenFace/build/lib/local/LandmarkDetector,
+					/Users/anshpatel/Documents/OpenFace/build/lib/local/GazeAnalyser,
+					/Users/anshpatel/Documents/OpenFace/build/lib/local/Utilities,
+					/usr/local/opt/openblas/lib/,
 				);
 				OTHER_LDFLAGS = (
 					"-lopencv_stitching",
@@ -378,6 +429,13 @@
 					"-lopencv_imgproc",
 					"-lopencv_core",
 					"-ldlib",
+					"-lFaceAnalyser",
+					"-lLandmarkDetector",
+					"-lGazeAnalyser",
+					"-lUtilities",
+					"-lboost_filesystem",
+					"-lboost_system",
+					"-lopenblas",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.facecap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
