@@ -281,6 +281,8 @@
 		753B438422809CBC00FA5F1B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A8TP5UN6Z5;
 				HEADER_SEARCH_PATHS = (
@@ -288,9 +290,11 @@
 					/usr/local/Cellar/dlib/19.17/include,
 					/Users/anshpatel/Documents/OpenFace/lib/local/LandmarkDetector/include,
 					/Users/anshpatel/Documents/OpenFace/lib/local/GazeAnalyser/include,
+					/Users/anshpatel/Documents/OpenFace/lib/local/FaceAnalyser/include,
 					/Users/anshpatel/Documents/OpenFace/lib/local/Utilities/include,
 					/usr/local/Cellar/boost/1.67.0_1/include,
 					/usr/local/opt/openblas/include,
+					/usr/local/Cellar/zeromq/4.3.1_1/include,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/FaceCap/Info.plist";
 				LIBRARY_SEARCH_PATHS = (
@@ -300,8 +304,10 @@
 					/Users/anshpatel/Documents/OpenFace/build/lib/local/FaceAnalyser,
 					/Users/anshpatel/Documents/OpenFace/build/lib/local/LandmarkDetector,
 					/Users/anshpatel/Documents/OpenFace/build/lib/local/GazeAnalyser,
+					/Users/anshpatel/Documents/OpenFace/lib/local/FaceAnalyser,
 					/Users/anshpatel/Documents/OpenFace/build/lib/local/Utilities,
 					/usr/local/opt/openblas/lib/,
+					/usr/local/Cellar/zeromq/4.3.1_1/lib,
 				);
 				OTHER_LDFLAGS = (
 					"-lopencv_stitching",
@@ -349,11 +355,13 @@
 					"-ldlib",
 					"-lFaceAnalyser",
 					"-lLandmarkDetector",
+					"-lFaceAnalyser",
 					"-lGazeAnalyser",
 					"-lUtilities",
 					"-lboost_filesystem",
 					"-lboost_system",
 					"-lopenblas",
+					"-lzmq",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.facecap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -363,6 +371,8 @@
 		753B438522809CBC00FA5F1B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A8TP5UN6Z5;
 				HEADER_SEARCH_PATHS = (
@@ -370,9 +380,11 @@
 					/usr/local/Cellar/dlib/19.17/include,
 					/Users/anshpatel/Documents/OpenFace/lib/local/LandmarkDetector/include,
 					/Users/anshpatel/Documents/OpenFace/lib/local/GazeAnalyser/include,
+					/Users/anshpatel/Documents/OpenFace/lib/local/FaceAnalyser/include,
 					/Users/anshpatel/Documents/OpenFace/lib/local/Utilities/include,
 					/usr/local/Cellar/boost/1.67.0_1/include,
 					/usr/local/opt/openblas/include,
+					/usr/local/Cellar/zeromq/4.3.1_1/include,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/FaceCap/Info.plist";
 				LIBRARY_SEARCH_PATHS = (
@@ -382,8 +394,10 @@
 					/Users/anshpatel/Documents/OpenFace/build/lib/local/FaceAnalyser,
 					/Users/anshpatel/Documents/OpenFace/build/lib/local/LandmarkDetector,
 					/Users/anshpatel/Documents/OpenFace/build/lib/local/GazeAnalyser,
+					/Users/anshpatel/Documents/OpenFace/lib/local/FaceAnalyser,
 					/Users/anshpatel/Documents/OpenFace/build/lib/local/Utilities,
 					/usr/local/opt/openblas/lib/,
+					/usr/local/Cellar/zeromq/4.3.1_1/lib,
 				);
 				OTHER_LDFLAGS = (
 					"-lopencv_stitching",
@@ -431,11 +445,13 @@
 					"-ldlib",
 					"-lFaceAnalyser",
 					"-lLandmarkDetector",
+					"-lFaceAnalyser",
 					"-lGazeAnalyser",
 					"-lUtilities",
 					"-lboost_filesystem",
 					"-lboost_system",
 					"-lopenblas",
+					"-lzmq",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.facecap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
