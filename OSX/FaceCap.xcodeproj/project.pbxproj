@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		753B438022809CBC00FA5F1B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 753B437F22809CBC00FA5F1B /* main.cpp */; };
 		753B43882281DB7500FA5F1B /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 753B43872281DB7500FA5F1B /* Accelerate.framework */; };
+		755C792922B3EACA001B1C8D /* TCPClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 755C792722B3EACA001B1C8D /* TCPClient.cpp */; };
 		7563D52822AAE2AC00647814 /* Info.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 753B43892281DDF000FA5F1B /* Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,8 @@
 		753B437F22809CBC00FA5F1B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		753B43872281DB7500FA5F1B /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		753B43892281DDF000FA5F1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		755C792722B3EACA001B1C8D /* TCPClient.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TCPClient.cpp; sourceTree = "<group>"; };
+		755C792822B3EACA001B1C8D /* TCPClient.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TCPClient.hpp; sourceTree = "<group>"; };
 		7571B5FD22B17BCD008A1033 /* libLandmarkDetector.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLandmarkDetector.a; path = ../../Documents/OpenFace/build/lib/local/LandmarkDetector/libLandmarkDetector.a; sourceTree = "<group>"; };
 		7571B5FF22B17BDF008A1033 /* libGazeAnalyser.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGazeAnalyser.a; path = ../../Documents/OpenFace/build/lib/local/GazeAnalyser/libGazeAnalyser.a; sourceTree = "<group>"; };
 		7571B60122B17BF2008A1033 /* libUtilities.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUtilities.a; path = ../../Documents/OpenFace/build/lib/local/Utilities/libUtilities.a; sourceTree = "<group>"; };
@@ -69,6 +72,8 @@
 			children = (
 				753B43892281DDF000FA5F1B /* Info.plist */,
 				753B437F22809CBC00FA5F1B /* main.cpp */,
+				755C792722B3EACA001B1C8D /* TCPClient.cpp */,
+				755C792822B3EACA001B1C8D /* TCPClient.hpp */,
 			);
 			path = FaceCap;
 			sourceTree = "<group>";
@@ -140,6 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				755C792922B3EACA001B1C8D /* TCPClient.cpp in Sources */,
 				753B438022809CBC00FA5F1B /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
