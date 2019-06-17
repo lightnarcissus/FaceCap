@@ -1,6 +1,8 @@
 # Prerequisites
 .vs/
 *.d
+FaceCapUnity/Library/
+*.meta
 
 # Compiled Object files
 *.slo
